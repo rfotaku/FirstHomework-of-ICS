@@ -27,6 +27,17 @@ void show_float(float x) {
 void show_pointer(void *x) {
     show_bytes((byte_pointer) &x, sizeof(void *));
 }
+/*start homework 2.57*/
+void show_short(short x){
+	show_bytes((byte_pointer)&x,sizeof(short));
+}
+void show_long(long x){
+	show_bytes((byte_pointer)&x,sizeof(long));
+}
+void show_double(double x){
+	show_bytes((byte_pointer)&x,sizeof(double));
+}
+/*end homework 2.57*/
 /* $end show-bytes */
 
 
@@ -126,6 +137,13 @@ int main(int argc, char *argv[])
 	string_ueg();
 	printf("Calling string_leg\n");
 	string_leg();
+	/*homework 2.57 */
+	printf("Calling show_short\n");
+	show_short(358);
+	printf("Calling show_long\n");
+	show_long(274877906944); 
+	printf("Calling show_double\n");
+	show_double(3.1415926535);
     }
     return 0;
 }
